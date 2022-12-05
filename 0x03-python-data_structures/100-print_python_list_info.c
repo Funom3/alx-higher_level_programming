@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <python.h>
+#include <Python.h>
 
 /**
  * print_python_list_info - prints the list of info
@@ -8,7 +8,7 @@
  *
  * Return: no return
  */
-void print_python_list_info(pyObject *p)
+void print_python_list_info(PyObject *p)
 {
 	long int size, i;
 	PyListObject *list;
