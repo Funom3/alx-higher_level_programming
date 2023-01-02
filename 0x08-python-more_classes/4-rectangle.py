@@ -44,19 +44,22 @@ class Rectangle:
 
         def perimeter(self):
             if self.__width == 0 or self.__height == 0:
-                return
-            return 2 * (self.__width + self.__height)
+                return (0)
+            return ((self.__width * 2) + (self.__height * 2))
 
-        def _str__(self):
+        def __str__(self):
+            """
+            Return the printed representation of the rectangle
+            represent the rectangle with # character
+            """
             if self.__width == 0 or self.__height == 0:
-                return ""
-            rectangle = ""
-            for row in range(self.__height):
-                for column in range(self.__width):
-                    rectangle += "#"
-                if row < self.__height - 1:
-                    return rectangle
-            return rectangle
+                return ("")
+            rect = []
+            for i in range(self.__height):
+                [rect.append('#') for j in range(self.__width)]
+                if i != self.__height - 1:
+                    rect.append("\n")
+            return ("".join(rect))
 
         def __repr__(self):
             """ returning the string representation of the rectangle"""
