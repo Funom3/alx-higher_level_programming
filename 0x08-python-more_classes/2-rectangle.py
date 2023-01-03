@@ -1,21 +1,24 @@
 #!/usr/bin/python3
-""" this function defines a rectangle by the private instance attribute"""
+"""a class that defines a rectangle"""
 
 
 class Rectangle:
-    """n the __init__ method initialize the values passed to the object
-    attributes:
-        width: its a private attribute
-        height: its a private attribute
-    """
-
-    def __init__(self, width=0, height=0):
+    """a rectangle"""
+    def __init__(self, wodth=0, height=0):
+        """Initializing the rectangle
+        Args:
+            width: its a private attribute
+            height: its a private attribute
+        Raises:
+            TypeError: if size is not integer
+            ValueError: if the size is less than zero
+        """
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """ the width property"""
+        """the width property"""
         return self.__width
 
     @width.setter
@@ -40,9 +43,11 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        return self.__width * self.__height
+        """Return the perimeter of the rectangle"""
+        return (self.__width * self.__height)
 
     def perimeter(self):
+        """Return the perimeter of the rectangle"""
         if self.__width == 0 or self.__height == 0:
             return 0
-        return 2 * (self.__width + self.__height)
+        return ((self.__width * 2) + (self.__height * 2))
