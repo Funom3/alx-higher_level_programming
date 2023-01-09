@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """module 9-rectangle
 creates a rectangle class
 """
