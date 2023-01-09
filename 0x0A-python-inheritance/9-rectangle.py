@@ -8,33 +8,21 @@ BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """Represents a rectangle
-    Private instances attributes:
-        - width
-        - height
-    Public method area()
-    Inherits from BaseGeometry
-    """
+    """Represents a rectangle"""
 
     def __init__(self, width, height):
-        """initialize an instance
+        """initialize the new rectangle
         Args:
-            - width: rectangle width
-            - height: rectangle height
+            width (int): the width
+            height (int): the height
         """
-
-        self.integer_validator("width", width)
-        sef.integer_validator("height", height)
+        super().integer_validator("width", width)
         self.__width = width
+        super().integer_validator("height", height)
         self.__height = height
 
     def __str__(self):
-        """return a formated string"""
-        return str("[Rectangle] {}/{}".format(self.__width, self.__height))
-
-    def area(self):
-        """computes the area of the rectangle instance
-        overwrites the area() method from the BaseGeometry
-        """
-
-        return self.__width * self.__height
+        """return the print() and the str() representation"""
+        string = "[" + str(self.__class__.__name__) + "] "
+        string += str(self.__width) + "/" + str(self.__height)
+        return string
