@@ -1,10 +1,7 @@
 #!/usr/bin/python3
-"""Module 10-square
-Creates a square class
-"""
+"""square class module"""
 
 
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
 Rectangle = __import__('9-rectangle').Rectangle
 
 
@@ -21,16 +18,10 @@ class Square(Rectangle):
             - size: squzre size
         """
         self.integer_validator("size", size)
-        super().__init__(size, size)
         self.__size = size
-
-    def __str__(self):
-        return super().__str__()
+        super().__init__(size, size)
 
     def area(self):
-        """
-        computes the area of a square instance
-        overwrites the area() method from the rectangle
-        """
+        """method that returns area of square"""
 
         return self.__size ** 2
