@@ -1,10 +1,8 @@
 #!/usr/bin/python3
-"""module base_geometry
-creates a base geometry class
-"""
+"""module base_geometry"""
 
 
-class BaseGeometry:
+class BaseGeometry():
     """class with public instance methods"""
 
     def area(self):
