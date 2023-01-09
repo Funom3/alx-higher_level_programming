@@ -28,13 +28,13 @@ class Rectangle(BaseGeometry):
         self.__width = width
         self.__height = height
 
-        def __str__(self):
-            """return a formated string"""
-            return str("[rectangle] {}/{}".format(self.__width, self.__height))
+    def __str__(self):
+        """return a formated string"""
+        return str("[rectangle] {}/{}".format(self.__width, self.__height))
 
-        def area(self):
-            """computes the area of the rectangle instance
-            overwrites the area() method from the BaseGeometry
-            """
+    def area(self):
+        """computes the area of the rectangle instance
+        overwrites the area() method from the BaseGeometry
+        """
 
-            return self.__width * self.__height
+        return self.__width * self.__height
