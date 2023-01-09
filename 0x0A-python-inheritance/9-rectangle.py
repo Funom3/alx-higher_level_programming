@@ -19,8 +19,8 @@ class Rectangle(BaseGeometry):
     def __init__(self, width, height):
         """initialize an instance
         Args:
-            width: rectangle width
-            height: rectangle height
+            - width: rectangle width
+            - height: rectangle height
         """
 
         self.integer_validator("width", width)
@@ -30,7 +30,7 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         """return a formated string"""
-        return str("[rectangle] {}/{}".format(self.__width, self.__height))
+        return str("[Rectangle] {}/{}".format(self.__width, self.__height))
 
     def area(self):
         """computes the area of the rectangle instance
