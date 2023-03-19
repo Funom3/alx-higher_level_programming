@@ -4,7 +4,7 @@ script that takes in an argument and displays all the values in th e state
 table of hbtn_0e_0_usa where name matches the argument
 """
 from sys import argv
-import MyDQLdb
+import MySQLdb
 if __name__ == "__main__":
     conn = MySQLdb.connect(
             host="localhost",
@@ -28,5 +28,5 @@ if __name__ == "__main__":
             rtn = ("MySQLdb Error - IndexError")
     for i in rtn:
         print(i)
-        cur.close()
-        conn.close()
+    cur.close()
+    conn.close()
