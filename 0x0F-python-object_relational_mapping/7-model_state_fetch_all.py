@@ -14,7 +14,7 @@ if __name__ == "__main__":
     start = sessionmaker()
     start.configure(bind=engine)
     session = start()
-    stmt = session.query(state).order_by(asc(state.id)).all()
+    stmt = session.query(State).order_by(asc(State.id)).all()
 
     for i in stmt:
         print("{:d}: {:s}".format(i.id, i.name))
