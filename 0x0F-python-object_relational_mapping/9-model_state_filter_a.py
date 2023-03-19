@@ -17,5 +17,5 @@ if __name__ == "__main__":
     stmt = session.query(State).filter(
             State.name.like("%a%")).order_by(asc(State.id)).all()
     for i in stmt:
-        print("{:d}: {:s}".format(i.id, i.id.name))
+        print("{:d}: {:s}".format(i.id, i.name))
     session.close()
